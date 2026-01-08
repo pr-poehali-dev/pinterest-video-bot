@@ -1,0 +1,32 @@
+{
+  "tests": [
+    {
+      "name": "Test stats endpoint",
+      "method": "GET",
+      "path": "/?endpoint=stats",
+      "headers": {
+        "X-Admin-Id": "123456789"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "total_downloads": "number",
+        "unique_users": "number"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Test downloads endpoint",
+      "method": "GET",
+      "path": "/?endpoint=downloads",
+      "headers": {
+        "X-Admin-Id": "123456789"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "downloads": "array",
+        "total": "number"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

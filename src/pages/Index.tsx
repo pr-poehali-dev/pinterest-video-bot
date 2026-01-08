@@ -207,9 +207,9 @@ const Index = () => {
                   Управление ботом и статистика скачиваний
                 </p>
               </div>
-              <Button variant="outline" className="ml-4">
+              <Button variant="outline" className="ml-4" onClick={() => window.location.href = '/admin'}>
                 <Icon name="Settings" size={18} className="mr-2" />
-                Настройки
+                Открыть
               </Button>
             </div>
           </Card>
